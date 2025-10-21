@@ -11,9 +11,8 @@ Build a **command-line zoo simulator** in **C# with .NET**. When launched, the a
 ## Objectives
 
 - Practice **basic OOP** in C#:
-  - Define a domain model for a zoo (areas and animals).
-  - Use **classes**, **interfaces**, **properties**, and **encapsulation**.
-  - Demonstrate **polymorphism** (e.g., animals share behaviors/contracts via an interface).
+  - Use **classes**, **interfaces** and **properties**.
+  - Demonstrate **polymorphism** (e.g., animals share behaviors/contracts through an interface).
 - Build a friendly **CLI** that guides a visitor through areas → animals → fun facts.
 - Ensure clean structure and defensive input handling.
 
@@ -27,18 +26,17 @@ Build a **command-line zoo simulator** in **C# with .NET**. When launched, the a
   - On start, display a greeting and a short introduction.
 
 - **Areas**
-  - The zoo must be divided into **multiple areas** (e.g., Rainforest, Savannah, Aquarium, Aviary, Desert, Mountains, Night House, etc.).
+  - The zoo must be divided into at least **3 areas** (e.g., Rainforest, Savannah, Aquarium, Aviary, Desert, Mountains, Night House, etc.).
   - Present the list of areas and ask the visitor where they want to go.
 
 - **Animals & Fun Facts**
   - Each area lists available animals.
   - The simulator must include **at least 15 distinct animals** in total (across all areas).
-  - After the visitor selects an animal, display a **fun fact** about it (short and engaging).
+  - After the visitor selects an animal, display a **fun fact** about it.
   - Allow the visitor to **view another animal**, **switch areas**, or **exit**.
 
-- **CLI UX**
+- **CLI**
   - Menu-driven flow with clear prompts and input validation (reject invalid or out-of-range inputs).
-  - Add small touches like ASCII dividers or brief pauses to make the experience pleasant.
 
 ---
 
@@ -47,7 +45,6 @@ Build a **command-line zoo simulator** in **C# with .NET**. When launched, the a
 - **Classes & Properties**
   - Represent core entities (areas, animals) using classes.
   - Use **properties** with validation when necessary (e.g., non-empty names).
-  - Keep internal state encapsulated (use private fields and public properties).
 
 - **Interfaces**
   - Define at least one **interface** that animals implement (for example, an interface that defines a method for returning fun facts).
@@ -65,9 +62,10 @@ Build a **command-line zoo simulator** in **C# with .NET**. When launched, the a
 
 - Include **at least 15 animals** spread across various areas.
 - Each animal must have:
-  - A **name** (common name is fine),
-  - An **area** association,
-  - A **fun fact** (one or more).
+  - A **name** (common name is fine)
+  - A **scientific name**
+  - An **area** association
+  - A **fun fact**
 - You can hard-code the data or load it from a simple file.
 
 ---
@@ -117,8 +115,6 @@ What would you like to do next?
 > 
 ```
 
-*(This output is only an example; you should design your own layout and messages.)*
-
 ---
 
 ## Technical Requirements
@@ -142,20 +138,19 @@ What would you like to do next?
 
 | Criterion                                               | Points | Description |
 |---------------------------------------------------------|--------|-------------|
-| OOP design (classes, interfaces, encapsulation)         | 25     | Uses well-structured classes and interfaces to model areas, animals, and shared behavior. Applies encapsulation with private fields and public properties. |
+| OOP design (classes, interfaces, encapsulation)         | 25     | Uses well-structured classes and interfaces to model areas, animals, and shared behavior. |
 | Properties & basic validation                           | 10     | Uses C# properties with validation (e.g., non-empty names, valid values). |
 | Polymorphism via interfaces (shared behavior)           | 15     | Demonstrates polymorphism using at least one interface shared by animals. |
 | Areas → Animals → Fun Facts flow                        | 20     | Implements a full visitor experience from area selection to viewing animal fun facts. Includes options to switch area or explore again. |
 | CLI UX (menus, prompts, error handling)                 | 15     | CLI is friendly and robust. Validates input, handles errors gracefully, and includes small UX touches (dividers, pauses). |
-| Code organization (structure you designed)              | 10     | Code is cleanly organized across files/classes. Logical separation of concerns (e.g., data, domain, UI). |
+| Code organization (structure you designed)              | 10     | Code is cleanly organized across files/classes. |
 | Git usage                                               | 5      | Git is used with **meaningful commit messages** and commits made in small, logical steps (e.g., class creation, CLI setup, area navigation). |
 
 ---
 
 ### Git Requirements
 
-- ✅ Commit frequently, after major tasks (e.g., domain classes, CLI skeleton, logic for areas/animals).  
-- ✅ Use **descriptive, task-based commit messages** (not just "update", "works" or "final version").  
+- ✅ Commit frequently, after major tasks.  
 
 ---
 
@@ -167,31 +162,7 @@ A separate `README.md/Markdown file` (not this instruction file) must be include
 - Provide **step-by-step instructions on how to build and run the app** (e.g., `dotnet build`, `dotnet run`).  
 - Summarize your OOP design: how classes and interfaces are used, and your reasoning behind the structure.  
 - List the zoo areas and sample animals included.  
-- Document any optional or bonus features implemented.  
-- *(Optional)* Include a screenshot or CLI demo snippet for polish.
-
-⚠️ **Important:** Please do not forget to include how to run the code in your README — this will be explicitly graded.
-
----
-
-### Bonus (Optional)
-
-- Multiple fun facts per animal, randomly selected.
-- Ability to search/filter animals by name.
-- Mark favorite animals.
-- Simple save/load feature to remember last visited area or favorites.
-
----
-
-## Suggested Timeline (1 Week)
-
-- **Day 1:** Design your domain model and interfaces; outline the CLI flow.
-- **Day 2:** Implement base classes, properties, and seed animal data.
-- **Day 3:** Build the main CLI menu and navigation logic.
-- **Day 4:** Add polish to prompts, loops, and validation.
-- **Day 5:** Add optional features and refine your OOP design.
-- **Day 6:** Test thoroughly and write the README.
-- **Day 7:** Final review and submission.
+- Document any optional or bonus features implemented.
 
 ---
 
@@ -203,4 +174,3 @@ A separate `README.md/Markdown file` (not this instruction file) must be include
   - Your design rationale (classes, interfaces, etc.).
   - The list of areas and animals included.
   - Optional or bonus features implemented.
-- *(Optional)* A short demo screenshot or GIF of the CLI.
